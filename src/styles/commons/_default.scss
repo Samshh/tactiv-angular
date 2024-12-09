@@ -48,6 +48,10 @@ img {
   text-overflow: ellipsis;
 }
 
+button {
+  border: none;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -60,16 +64,15 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: $white;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--surface-default-tertiary);
+  background: $primary;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--surface-default-tertiary);
-  border-radius: $radius-sm;
+  background: $primary;
 }
 
 .disabled {

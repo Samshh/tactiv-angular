@@ -1,0 +1,23 @@
+.btn-red, .btn-blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-xs-2 $spacing-xlg;
+  font-size: $normal;
+  font-family: $F1-SemiBold;
+  color: $white;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-blue:hover, .btn-red:hover {
+  transform: scale(1.1);
+}
+
+.btn-red {
+  background-color: $primary;
+}
+
+.btn-blue {
+  background-color: $blue;
+}

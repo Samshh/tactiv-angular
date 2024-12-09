@@ -1,0 +1,30 @@
+.home-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: $spacing-md;
+  text-align: center;
+  padding: $spacing-xlg;
+  box-shadow: $shadow-md;
+  border: 1px solid $border;
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+  
+  .card-banner {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-family: $F1-SemiBold;
+    font-size: $normal;
+    color: $accent;
+    text-transform: uppercase;
+  }
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+}

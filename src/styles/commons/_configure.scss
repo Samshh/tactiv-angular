@@ -18,6 +18,8 @@ $accent: #1c2253;
 $white: #fff;
 $black: #313131;
 $primary: #e50019;
+$blue: #114b9f;
+$border: #e0e0e0;
 
 /* FONT SIZES
  * We should strictly follow the declared font sizes and should
@@ -59,7 +61,7 @@ $radius-xs: torem(4);
 $radius-sm: torem(8);
 $radius-normal: torem(12);
 $radius-md: torem(16);
-// $radius-lg: torem(24);
+$radius-lg: torem(24);
 
 $avatar-sizes: (
   "sm": torem(24),

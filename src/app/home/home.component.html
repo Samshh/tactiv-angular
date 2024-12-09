@@ -1,6 +1,71 @@
-<section id="home">
-  <h1>Welcome to my portfolio</h1>
-  <div>
-    
+<div id="home">
+  <img class="bg" src="assets/background/red-bg.png" alt="" />
+  <section class="landing">
+    <h2>Mapúa MCM</h2>
+    <h1>
+      Shaping Tomorrow's <br />
+      Innovators in Technology
+    </h1>
+    <div class="landing-button">
+      <a href="https://mcm-edu.my.salesforce-sites.com/applynow" target="_black" rel="norefferer noopener">
+        <button type="button" class="btn-red">Apply Now</button>
+      </a>
+      <button (click)="goToPage('/programs')" type="button" class="btn-blue">Programs</button>
+    </div>
+  </section>
+  <div class="landing-content">
+    <section>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/9hm-ZMv9NEk?enablejsapi=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          controls
+        ></iframe>
+      </div>
+    </section>
+    <div class="landing-about">
+      <div class="main-content">
+        <img class="ccis-logo" src="assets/logo/main-logo.png" alt="" />
+        <div class="main-text">
+          <h1>College of Computer and Information Science</h1>
+          <p>
+            The College of Computer and Information Science (CCIS) designed its
+            curricula to produce IT professionals who embody creative,
+            technical, and analytical faculties and shall utilize the same for
+            nation-building. <span (click)="goToPage('/about')">Read more...</span>
+          </p>
+        </div>
+        <div class="cards">
+          <div class="home-card">
+            <img class="card-banner" src="assets/programs/CS.jpg" alt="">
+            <p class="card-title">Computer Science</p>
+            <p>
+              The Bachelor of Science in Computer Science program trains
+              students in planning, researching, and developing algorithms and
+              software for Windows, web, and mobile platforms.
+            </p>
+          </div>
+          <div class="home-card">
+            <img class="card-banner" src="assets/programs/EMC.jpg" alt="">
+            <p class="card-title">Entertainment & Multimedia Computing</p>
+            <p>
+              The Bachelor of Science in Entertainment and Multimedia Computing
+              with a focus on Game Development equips students to design,
+              develop, and manage digital games.
+            </p>
+          </div>
+          <div class="home-card">
+            <img class="card-banner" src="assets/programs/IS.jpg" alt="">
+            <p class="card-title">Information Systems</p>
+            <p>
+              The Bachelor of Science in Information Systems program prepares
+              students to be IT professionals and experts in designing and
+              implementing Information Systems for business processes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>

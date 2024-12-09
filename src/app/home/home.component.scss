@@ -2,8 +2,121 @@
 @import "commons/configure";
 
 #home {
-  @include setSection(torem(1280), $spacing-md);
-  h1 {
-    font-size: $h1;
+  position: relative;
+  .bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  .landing {
+    position: sticky;
+    top: 0;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    @include setSection(torem(1280), $spacing-md);
+
+    h1 {
+      color: $white;
+      font-size: $h2;
+      font-family: $F2-Bold;
+    }
+
+    h2 {
+      color: $white;
+      font-size: $h3;
+      font-family: $F2-SemiBold;
+      text-transform: uppercase;
+    }
+
+    .landing-button {
+      display: flex;
+      gap: $spacing-md;
+      margin-top: $spacing-md-2;
+    }
+  }
+
+  .landing-content {
+    position: sticky;
+    top: 0;
+    height: auto;
+    background-color: #f9f9f9;
+
+    section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      @include setSection(torem(1280), $spacing-md);
+      padding-top: torem(160);
+      padding-bottom: torem(160);
+
+      .video-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $shadow-lg;
+
+        iframe {
+          width: 100%;
+          height: 70vh;
+        }
+      }
+    }
+
+    .landing-about {
+      background-color: $white;
+      height: auto;
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-xlg;
+        @include setSection(torem(1280), $spacing-md);
+        padding-top: torem(160);
+        padding-bottom: torem(160);
+        text-align: center;
+
+        .ccis-logo {
+          height: torem(250);
+          width: auto;
+        }
+
+        .main-text {
+          margin-bottom: $spacing-xlg;
+          h1 {
+            font-size: $h4;
+            font-family: $F2-Bold;
+            color: $accent;
+          }
+          p {
+            max-width: torem(768);
+
+            span {
+              color: $primary;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .cards {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr;
+          justify-content: start;
+          align-items: start;
+          gap: $spacing-xlg;
+        }
+      }
+    }
   }
 }

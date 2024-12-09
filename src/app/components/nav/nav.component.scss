@@ -8,6 +8,7 @@
   box-shadow: $shadow-md;
   -webkit-user-select: none;
   user-select: none;
+  z-index: 1000;
   section {
     display: flex;
     justify-content: space-between;
@@ -29,6 +30,7 @@
       justify-content: space-between;
       align-items: center;
       gap: $spacing-xlg;
+      
       p {
         cursor: pointer;
         padding: $spacing-xs-2;
