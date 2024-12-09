@@ -1,2 +1,70 @@
 @import "commons/utils";
 @import "commons/configure";
+
+#footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .footer-upper,
+  .footer-lower {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-upper {
+    background-color: #737373;
+    padding: $spacing-md;
+
+    div {
+      max-width: torem(1080);
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: torem(260);
+      p {
+        color: #fff;
+        font-size: $small-2;
+        font-family: $F1-Medium;
+      }
+      img {
+        height: torem(150);
+      }
+
+      .footer-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: auto;
+        margin: 0;
+        gap: $spacing-md;
+
+        .footer-separator {
+          width: 100%;
+          height: torem(1);
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .footer-lower {
+    background-color: #000;
+    padding: $spacing-xs-2;
+
+    div {
+      p {
+        text-align: center;
+        color: #fff;
+        font-size: $small-2;
+        font-family: $F1-Medium;
+      }
+    }
+  }
+}
