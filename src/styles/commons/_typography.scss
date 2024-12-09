@@ -1,7 +1,16 @@
-$InterFont: (
-  ($F1-Regular, 'Inter-Regular'),
-  ($F1-Medium, 'Inter-Medium'),
-  ($F1-SemiBold, 'Inter-SemiBold'),
-  ($F1-Bold, 'Inter-Bold'),
+$PoppinsFont: (
+  ($F1-Regular, "Poppins-Regular"),
+  ($F1-Medium, "Poppins-Medium"),
+  ($F1-SemiBold, "Poppins-SemiBold"),
+  ($F1-Bold, "Poppins-Bold")
 );
-@include setFontFace($InterFont, '/assets/fonts/Inter', 'otf');
+
+$CinzelFont: (
+  ($F2-Regular, "Cinzel-Regular"),
+  ($F2-Medium, "Cinzel-Medium"),
+  ($F2-SemiBold, "Cinzel-SemiBold"),
+  ($F2-Bold, "Cinzel-Bold")
+);
+
+@include setFontFace($PoppinsFont, "/assets/fonts/poppins", "ttf");
+@include setFontFace($CinzelFont, "/assets/fonts/cinzel", "ttf");

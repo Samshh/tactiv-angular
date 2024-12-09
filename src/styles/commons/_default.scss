@@ -1,15 +1,14 @@
-
-:root{
+:root {
   --line-clamp: 1;
 }
 
 body {
   * {
-      font-family: $F1-Regular;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      letter-spacing: $letter-spacing-Regular;
-      font-size: $normal;
+    font-family: $F1-Regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: $letter-spacing-Regular;
+    font-size: $normal;
   }
   overflow-y: scroll;
 }
@@ -21,21 +20,21 @@ h4,
 h5,
 h6,
 p,
-a{
+a {
   margin: 0;
   padding: 0;
 }
 
-a{
+a {
   text-decoration: none;
   color: unset;
 }
 
-img{
+img {
   object-fit: cover;
 }
 
-.line-clamp{
+.line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: var(--line-clamp);
   line-clamp: var(--line-clamp);
@@ -43,13 +42,13 @@ img{
   overflow: hidden;
 }
 
-.text-ellipsis{
+.text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -81,7 +80,7 @@ ul{
 ul.disc {
   list-style: disc;
   li {
-    margin-left: $spacing-md; 
+    margin-left: $spacing-md;
     color: $black;
   }
 }

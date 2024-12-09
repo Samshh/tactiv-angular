@@ -1,1 +1,9 @@
 @import "commons/utils";
+@import "commons/configure";
+
+#home {
+  @include setSection(torem(1280), $spacing-md);
+  h1 {
+    font-size: $h1;
+  }
+}

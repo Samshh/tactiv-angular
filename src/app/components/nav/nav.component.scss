@@ -1,0 +1,46 @@
+@import "commons/utils";
+@import "commons/configure";
+#nav {
+  background-color: $white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  box-shadow: $shadow-md;
+  -webkit-user-select: none;
+  user-select: none;
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include setSection(torem(1280), $spacing-md);
+    .logo {
+      img {
+        height: torem(70);
+        transition: all 0.3s ease;
+      }
+
+      img:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: $spacing-xlg;
+      p {
+        cursor: pointer;
+        padding: $spacing-xs-2;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        color: $accent;
+      }
+
+      p:hover {
+        color: $primary;
+        border-bottom: 1px solid $primary;
+      }
+    }
+  }
+}

@@ -1,52 +1,57 @@
+$F1: "Poppins";
+$F2: "Cinzel";
 
-$F1: 'Inter';
+$F1-Regular: #{$F1} Regular;
+$F1-Medium: #{$F1} Medium;
+$F1-SemiBold: #{$F1} SemiBold;
+$F1-Bold: #{$F1} Bold;
 
-$F1-Regular           : #{$F1} Regular;
-$F1-Medium            : #{$F1} Medium;
-$F1-SemiBold          : #{$F1} SemiBold;
-$F1-Bold              : #{$F1} Bold;
+$F2-Regular: #{$F2} Regular;
+$F2-Medium: #{$F2} Medium;
+$F2-SemiBold: #{$F2} SemiBold;
+$F2-Bold: #{$F2} Bold;
 
 /* COLORS
  *
  */
-$primary    : #0074d9;
-$white      : #fff;
-$black      : #000;
-$danger     : #ff4136;
+$accent: #1c2253;
+$white: #fff;
+$black: #313131;
+$primary: #e50019;
 
 /* FONT SIZES
  * We should strictly follow the declared font sizes and should
  * avoid as much as possible doing custom font sizes.
  */
-$basefont : torem(16);
-$h1       : torem(60);
-$h2       : torem(48);
-$h3       : torem(35);
-$h4       : torem(30);
-$h5       : torem(24);
-$h6-2     : torem(20);
-$h6       : torem(18);
-$normal   : torem(16);
-$small-2  : torem(14);
-$small    : torem(12);
-$xsmall   : torem(10);
+$basefont: torem(16);
+$h1: torem(60);
+$h2: torem(48);
+$h3: torem(35);
+$h4: torem(30);
+$h5: torem(24);
+$h6-2: torem(20);
+$h6: torem(18);
+$normal: torem(16);
+$small-2: torem(14);
+$small: torem(12);
+$xsmall: torem(10);
 
 /* SPACINGS
  * define our spacing. we should strictly follow this also
  */
-$spacing-none    : 0;
-$spacing-xs      : torem(4);
-$spacing-xs-2    : torem(8);
-$spacing-sm      : torem(10);
-$spacing-sm-2    : torem(12);
-$spacing-sm-3    : torem(14);
-$spacing-md      : torem(16);
-$spacing-md-2    : torem(18);
-$spacing-lg      : torem(24);
-$spacing-lg-2    : torem(28);
-$spacing-xlg     : torem(32);
-$spacing-xxlg    : torem(48);
-$spacing-xxxlg   : torem(100);
+$spacing-none: 0;
+$spacing-xs: torem(4);
+$spacing-xs-2: torem(8);
+$spacing-sm: torem(10);
+$spacing-sm-2: torem(12);
+$spacing-sm-3: torem(14);
+$spacing-md: torem(16);
+$spacing-md-2: torem(18);
+$spacing-lg: torem(24);
+$spacing-lg-2: torem(28);
+$spacing-xlg: torem(32);
+$spacing-xxlg: torem(48);
+$spacing-xxxlg: torem(100);
 
 $letter-spacing-Regular: -0.48px;
 
@@ -57,15 +62,17 @@ $radius-md: torem(16);
 // $radius-lg: torem(24);
 
 $avatar-sizes: (
-    'sm': torem(24),
-    'md': torem(32),
-    'lg': torem(48),
+  "sm": torem(24),
+  "md": torem(32),
+  "lg": torem(48),
 );
 
 /* Shadows */
 // Focus Ring/Primary
-$focus-ring-primary: 0px 0px 0px 2px #202A17;
+$focus-ring-primary: 0px 0px 0px 2px #202a17;
 // Shadow/xs
 $shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-$shadow-md: 0px 2px 4px -2px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
-$shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+$shadow-md: 0px 2px 4px -2px rgba(16, 24, 40, 0.06),
+  0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+$shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+  0px 12px 16px -4px rgba(16, 24, 40, 0.08);

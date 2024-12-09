@@ -7,100 +7,115 @@
 // Over-ride bootstrap theme colors
 // https://getbootstrap.com/docs/5.0/customize/color/#all-colors
 $theme-colors: (
-    "primary": $primary,
-    "light": $white,
-    "dark": $black,
+  "primary": $primary,
+  "light": $white,
+  "dark": $black,
 );
 
-
-$utilities: map-merge($utilities,
-    ("rounded": map-merge(map-get($utilities, "rounded"),
-        (values: map-merge(map-get(map-get($utilities, "rounded"), "values"),
-                (
-
-                ),
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded":
+      map-merge(
+        map-get($utilities, "rounded"),
+        (
+          values:
+            map-merge(map-get(map-get($utilities, "rounded"), "values"), ()),
+        )
+      ),
+    "border-color":
+      map-merge(
+        map-get($utilities, "border-color"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "border-color"), "values"),
+              ()
             ),
-        ),
-    ),
-    "border-color": map-merge(map-get($utilities, "border-color"),
-        (values: map-merge(map-get(map-get($utilities, "border-color"), "values"),
-                ( 
-
-                ),
+        )
+      ),
+    "color":
+      map-merge(
+        map-get($utilities, "color"),
+        (
+          values: map-merge(map-get(map-get($utilities, "color"), "values"), ()),
+        )
+      ),
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "background-color"), "values"),
+              ()
             ),
-        ),
-    ),
-    "color": map-merge(map-get($utilities, "color"),
-        (values: map-merge(map-get(map-get($utilities, "color"), "values"),
-                (
-
-                ),
+        )
+      ),
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "font-size"), "values"),
+              (
+                24: torem(24),
+              )
             ),
-        ),
-    ),
-    "background-color": map-merge(map-get($utilities, "background-color"),
-        (values: map-merge(map-get(map-get($utilities, "background-color"), "values"),
-                (
-                    
-                ),
-            ),
-        ),
-    ),
-    "font-size": map-merge(
-      map-get($utilities, "font-size"),
-      (
-        values: map-merge(
-          map-get(map-get($utilities, "font-size"), "values"),
-          (
-            24: torem(24),
-          ),
-        ),
+        )
+      ),
+    "cursor": (
+      class: c,
+      property: cursor,
+      values: (
+        "pointer": pointer,
+        "default": default,
       ),
     ),
-    "cursor": (
-        class: c,
-        property: cursor,
-        values: (
-            "pointer": pointer,
-            "default": default
-        )
-    ),
-    "width": map-merge(
+    "width":
+      map-merge(
         map-get($utilities, "width"),
         (
-            values: map-merge(
-            map-get(map-get($utilities, "width"), "values"),
-            (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
                 unset: unset,
                 0: 0,
-                'fit': fit-content,
-                '50': '50%',
+                "fit": fit-content,
+                "50": "50%",
+              )
             ),
-            ),
-        ),
-    ),
-    "max-width": map-merge(
+        )
+      ),
+    "max-width":
+      map-merge(
         map-get($utilities, "max-width"),
         (
-            values: map-merge(
-            map-get(map-get($utilities, "max-width"), "values"),
-            (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "max-width"), "values"),
+              (
                 unset: unset,
+              )
             ),
-            ),
-        ),
-    ),
-    "height": map-merge(
+        )
+      ),
+    "height":
+      map-merge(
         map-get($utilities, "height"),
         (
-            values: map-merge(
-            map-get(map-get($utilities, "height"), "values"),
-            (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "height"), "values"),
+              (
                 unset: unset,
                 0: 0,
-                'fit': fit-content,
+                "fit": fit-content,
+              )
             ),
-            ),
-        ),
-    ),
-));
+        )
+      ),
+  )
+);
