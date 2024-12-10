@@ -12,14 +12,16 @@
   }
 
   .landing {
-    position: sticky;
-    top: 0;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
     @include setSection(torem(1280), $spacing-md);
+    @include setMinMedia("md") {
+      position: sticky;
+      top: 0;
+    }
 
     h1 {
       color: $white;
@@ -43,10 +45,12 @@
   }
 
   .landing-content {
-    position: sticky;
-    top: 0;
     height: auto;
-    background-color: #f9f9f9;
+    background-color: $section-bg;
+    @include setMinMedia("md") {
+      position: sticky;
+      top: 0;
+    }
 
     section {
       position: relative;
@@ -91,7 +95,7 @@
           height: torem(250);
           width: auto;
 
-          @include setMedia("sm") {
+          @include setMaxMedia("sm") {
             height: torem(150);
           }
         }
@@ -108,7 +112,7 @@
             font-size: $h4;
             font-family: $F2-Bold;
             color: $accent;
-            @include setMedia("sm") {
+            @include setMaxMedia("sm") {
               font-size: $h5;
             }
           }
@@ -129,7 +133,7 @@
           justify-content: start;
           align-items: start;
           gap: $spacing-xlg;
-          @include setMedia("md") {
+          @include setMaxMedia("md") {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
           }

@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     @include setSection(torem(1280), $spacing-md);
-    @include setMedia("md") {
+    @include setMaxMedia("md") {
       flex-direction: column;
     }
 

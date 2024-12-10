@@ -3,7 +3,6 @@
  */
 @use "sass:math";
 @use "sass:map";
-@import "commons/configure";
 
 @function torem($value) {
   @return #{math.div($value, 16)}rem;
@@ -34,9 +33,19 @@
   padding: $padding;
 }
 
-@mixin setMedia($size) {
+@mixin setMaxMedia($size) {
   @if map.has-key($breakpoints, $size) {
     @media (max-width: map.get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$size}. Available breakpoints: #{map.keys($breakpoints)}";
+  }
+}
+
+@mixin setMinMedia($size) {
+  @if map.has-key($breakpoints, $size) {
+    @media (min-width: map.get($breakpoints, $size)) {
       @content;
     }
   } @else {

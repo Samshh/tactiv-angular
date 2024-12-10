@@ -1,0 +1,115 @@
+@import "commons/utils";
+@import "commons/configure";
+
+#about {
+  position: relative;
+  .bg {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  .about-heading {
+    text-align: start;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-xlg;
+    padding: $spacing-md;
+    padding-top: torem(160);
+    padding-bottom: torem(160);
+    @include setSection(torem(1280), auto);
+    @include setMaxMedia("md") {
+      flex-direction: column;
+      text-align: center;
+    }
+    @include setMinMedia("md") {
+      position: sticky;
+      top: 0;
+    }
+
+    img {
+      height: torem(174);
+      width: auto;
+    }
+
+    h1 {
+      color: $white;
+      font-size: $h4;
+      font-family: $F2-SemiBold;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      color: $white;
+      max-width: torem(768);
+    }
+  }
+
+  .about-content {
+    background: $white;
+    @include setMinMedia("md") {
+      position: sticky;
+      top: 0;
+    }
+
+    .mmcm-vmg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: $spacing-md;
+      padding-top: torem(160);
+      padding-bottom: torem(160);
+      @include setSection(torem(1280), auto);
+      gap: $spacing-xlg;
+      .mmcm {
+        font-size: $h2;
+        font-family: $F2-SemiBold;
+        color: $accent;
+      }
+      .vmg {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: $spacing-xlg;
+        max-width: torem(968);
+        @include setMaxMedia("sm") {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-md-2;
+        }
+        .vm {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: center;
+          gap: $spacing-md-2;
+          .vmg-heading {
+            text-align: center;
+            font-size: $h3;
+            font-family: $F2-SemiBold;
+            color: $accent;
+          }
+          .vmg-text {
+            color: $black;
+            text-align: start;
+
+            span {
+              color: $primary;
+            }
+          }
+          .motto {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .ccis {
+    background-color: $section-bg;
+  }
+}
