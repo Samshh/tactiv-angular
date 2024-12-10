@@ -29,9 +29,10 @@
 
     h2 {
       color: $white;
-      font-size: $h3;
-      font-family: $F2-SemiBold;
+      font-size: $h4;
+      font-family: $F2-Medium;
       text-transform: uppercase;
+      margin-bottom: $spacing-xs;
     }
 
     .landing-button {
@@ -89,14 +90,27 @@
         .ccis-logo {
           height: torem(250);
           width: auto;
+
+          @include setMedia("sm") {
+            height: torem(150);
+          }
         }
 
         .main-text {
           margin-bottom: $spacing-xlg;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: $spacing-sm;
+
           h1 {
             font-size: $h4;
             font-family: $F2-Bold;
             color: $accent;
+            @include setMedia("sm") {
+              font-size: $h5;
+            }
           }
           p {
             max-width: torem(768);
@@ -115,6 +129,10 @@
           justify-content: start;
           align-items: start;
           gap: $spacing-xlg;
+          @include setMedia("md") {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+          }
         }
       }
     }

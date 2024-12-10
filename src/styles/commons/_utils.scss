@@ -2,6 +2,8 @@
  * @desc : converts PX values to REM;
  */
 @use "sass:math";
+@use "sass:map";
+@import "commons/configure";
 
 @function torem($value) {
   @return #{math.div($value, 16)}rem;
@@ -30,4 +32,14 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: $padding;
+}
+
+@mixin setMedia($size) {
+  @if map.has-key($breakpoints, $size) {
+    @media (max-width: map.get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$size}. Available breakpoints: #{map.keys($breakpoints)}";
+  }
 }
